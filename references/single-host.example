@@ -1,0 +1,27 @@
+# ~/.skill-source-ignore example -- single-host ignore list
+#
+# List skill names that are "permanently used on only one end, not to be adopted into the source", one per line.
+# scan.sh folds them out of "adoption candidates" into a single CANDIDATE_IGNORED line,
+# so reconcile no longer spams these fixed-noise entries line by line.
+#
+# Typically ignored:
+#   - plugin-supplied skills (source lives in their GitHub repo, path is versioned, can't be symlink-merged)
+#   - skills that collide with the other end's builtin and are bound to stay single-host
+#
+# Usage: copy this file to ~/.skill-source-ignore and fill it in as needed
+#   cp single-host.example ~/.skill-source-ignore
+# Or put it elsewhere and point at it via an env var:
+#   SYNC_IGNORE=/your/path  scan.sh
+#
+# Rules:
+#   - one skill name per line (exact match, case-sensitive)
+#   - lines starting with "#", or content after an inline "#", are comments
+#   - blank lines are ignored
+#
+# Note: this is a template and contains no real entries. Your list lives in ~/.skill-source-ignore,
+#       which is in your home dir and naturally does not travel with the skill repo, so private
+#       skill names are never committed to a public repo.
+#
+# Example (remove the "#" below and replace with your own skill names):
+# my-local-only-skill
+# some-plugin-supplied-skill

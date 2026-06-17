@@ -1,0 +1,6 @@
+.DS_Store
+*.swp
+*~
+
+# Runtime state: generated in the source by install.sh / migrate.sh, not tracked in the repo
+.sync-origin

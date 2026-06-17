@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sync Skills"
+  short_description: "Unify skills across Claude Code / Codex: source-of-truth + symlinks + reconcile"
+  default_prompt: "Use $sync-skills to reconcile and unify my skills."
